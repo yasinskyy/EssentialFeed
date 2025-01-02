@@ -11,7 +11,6 @@ public protocol HTTPClient {
     func get(from url: URL)
 }
 
-
 public final class RemoteFeedLoader {
     
     private let url: URL
