@@ -27,6 +27,27 @@ class URLSessionHTTPClient {
 
 class URLSessionHTTPClientTests: XCTestCase {
     
+    func test_getFromURL_performsGETRequestWithURL() {
+        URLProtocolStub.startInterceptingRequests()
+        
+        let url = URL(string: "https://any-url.com")!
+        let exp = expectation(description: "Wait for request")
+        let sut = URLSessionHTTPClient()
+        
+        URLProtocolStub.observeRequests { request in
+            XCTAssertEqual(request.url, url)
+            XCTAssertEqual(request.httpMethod, "GET")
+            
+            exp.fulfill()
+        }
+        
+        sut.get(from: url) { _ in }
+        
+        wait(for: [exp], timeout: 1.0)
+        
+        URLProtocolStub.stopInterceptingRequests()
+    }
+    
     func test_getFromURL_failsOnRequestError() {
         URLProtocolStub.startInterceptingRequests()
         
@@ -67,6 +88,15 @@ class URLSessionHTTPClientTests: XCTestCase {
         }
         
         private static var stub: Stub?
+        private static var requestsObserver: ((URLRequest) -> Void)?
+        
+        static func stub(data: Data?, response: URLResponse?, error: Error?) {
+            stub = Stub(data: data, response: response, error: error)
+        }
+        
+        static func observeRequests(observer: @escaping (URLRequest) -> Void) {
+            requestsObserver = observer
+        }
         
         static func startInterceptingRequests() {
             URLProtocol.registerClass(URLProtocolStub.self)
@@ -75,13 +105,11 @@ class URLSessionHTTPClientTests: XCTestCase {
         static func stopInterceptingRequests() {
             URLProtocol.unregisterClass(URLProtocolStub.self)
             stub = nil
-        }
-        
-        static func stub(data: Data?, response: URLResponse?, error: Error?) {
-            stub = Stub(data: data, response: response, error: error)
+            requestsObserver = nil
         }
         
         override class func canInit(with request: URLRequest) -> Bool {
+            requestsObserver?(request)
             return true
         }
         
