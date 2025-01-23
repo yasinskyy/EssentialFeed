@@ -1,5 +1,7 @@
 # Essential App Case Study
 
+[Original Project](https://github.com/essentialdevelopercom/essential-feed-case-study)
+
 ## CI / CD
 
 CI Command to run build & tests: `xcodebuild clean build test -project EssentialFeed.xcodeproj -scheme "EssentialFeed" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO`
