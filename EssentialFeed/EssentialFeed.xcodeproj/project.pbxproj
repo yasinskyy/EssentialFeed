@@ -55,7 +55,7 @@
 		96D921C02D3F7A750022735C /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D921CA2D3F7A920022735C /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		96D921D52D3F96EE0022735C /* EssentialFeedTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedTestPlan.xctestplan; path = EssentialFeed/EssentialFeedTestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
-		96D921D62D3FA43B0022735C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		96D921D62D3FA43B0022735C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
