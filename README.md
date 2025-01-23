@@ -2,6 +2,8 @@
 
 [Original Project](https://github.com/essentialdevelopercom/essential-feed-case-study)
 
+[![CI](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI.yml)
+
 ## Image Feed Feature Specs
 
 ### Story: Customer requests to see their image feed
