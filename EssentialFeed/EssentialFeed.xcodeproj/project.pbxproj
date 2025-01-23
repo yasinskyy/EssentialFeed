@@ -56,6 +56,7 @@
 		96D921CA2D3F7A920022735C /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		96D921D52D3F96EE0022735C /* EssentialFeedTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedTestPlan.xctestplan; path = EssentialFeed/EssentialFeedTestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
 		96D921D62D3FA43B0022735C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		96EA0E5C2D42AE500001499E /* CI.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = CI.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				96D921D62D3FA43B0022735C /* README.md */,
+				96EA0E5E2D42AE500001499E /* .github */,
 				080EDEF321B6DA7E00813479 /* EssentialFeed */,
 				080EDEFE21B6DA7E00813479 /* EssentialFeedTests */,
 				96D921CB2D3F7A920022735C /* EssentialFeedAPIEndToEndTests */,
@@ -170,6 +172,23 @@
 			);
 			path = EssentialFeedAPIEndToEndTests;
 			sourceTree = "<group>";
+		};
+		96EA0E5D2D42AE500001499E /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				96EA0E5C2D42AE500001499E /* CI.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		96EA0E5E2D42AE500001499E /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				96EA0E5D2D42AE500001499E /* workflows */,
+			);
+			name = .github;
+			path = ../.github;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
