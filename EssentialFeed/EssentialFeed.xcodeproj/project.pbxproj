@@ -113,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				080EDEF521B6DA7E00813479 /* Info.plist */,
-				96EA86422D4372780065FDBF /* CITestPlan.xctestplan */,
 				96D921D52D3F96EE0022735C /* EssentialFeedTestPlan.xctestplan */,
+				96EA86422D4372780065FDBF /* CITestPlan.xctestplan */,
 				080EDF1021B6DFA200813479 /* Feed Feature */,
 				46C3F5FF2D26975A0047EB56 /* Feed API */,
 			);

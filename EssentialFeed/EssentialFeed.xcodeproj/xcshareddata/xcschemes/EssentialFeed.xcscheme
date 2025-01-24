@@ -52,6 +52,9 @@
             reference = "container:EssentialFeed/EssentialFeedTestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:EssentialFeed/CITestPlan.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
