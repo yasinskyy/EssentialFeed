@@ -24,6 +24,7 @@
 		96E053D92D5491B90023C763 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053D82D5491B90023C763 /* LocalFeedLoader.swift */; };
 		96E053DB2D5492470023C763 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DA2D5492470023C763 /* FeedStore.swift */; };
 		96E053DD2D54C2EA0023C763 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DC2D54C2EA0023C763 /* RemoteFeedItem.swift */; };
+		96E053DF2D54C3170023C763 /* LocalFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DE2D54C3170023C763 /* LocalFeedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		96E053D82D5491B90023C763 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		96E053DA2D5492470023C763 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		96E053DC2D54C2EA0023C763 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
+		96E053DE2D54C3170023C763 /* LocalFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedItem.swift; sourceTree = "<group>"; };
 		96EA0E5C2D42AE500001499E /* CI.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = CI.yml; sourceTree = "<group>"; };
 		96EA86422D4372780065FDBF /* CITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CITestPlan.xctestplan; path = EssentialFeed/CITestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -199,6 +201,7 @@
 			children = (
 				96E053DA2D5492470023C763 /* FeedStore.swift */,
 				96E053D82D5491B90023C763 /* LocalFeedLoader.swift */,
+				96E053DE2D54C3170023C763 /* LocalFeedItem.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				080EDF0E21B6DCB600813479 /* FeedLoader.swift in Sources */,
 				96E053DD2D54C2EA0023C763 /* RemoteFeedItem.swift in Sources */,
 				46C3F6012D2697B50047EB56 /* RemoteFeedLoader.swift in Sources */,
+				96E053DF2D54C3170023C763 /* LocalFeedItem.swift in Sources */,
 				96E053DB2D5492470023C763 /* FeedStore.swift in Sources */,
 				96E053D92D5491B90023C763 /* LocalFeedLoader.swift in Sources */,
 				46C3F6032D2E534B0047EB56 /* HTTPClient.swift in Sources */,
