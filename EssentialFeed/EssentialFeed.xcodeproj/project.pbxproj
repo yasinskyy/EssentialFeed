@@ -194,8 +194,8 @@
 		96E053D72D5491A30023C763 /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
-				96E053D82D5491B90023C763 /* LocalFeedLoader.swift */,
 				96E053DA2D5492470023C763 /* FeedStore.swift */,
+				96E053D82D5491B90023C763 /* LocalFeedLoader.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
