@@ -129,7 +129,6 @@ class CacheFeedUseCaseTests: XCTestCase {
     }
     
     private class FeedStoreSpy: FeedStore {
-        
         enum ReceivedMessage: Equatable {
             case deleteCachedFeed
             case insert([LocalFeedImage], Date)
