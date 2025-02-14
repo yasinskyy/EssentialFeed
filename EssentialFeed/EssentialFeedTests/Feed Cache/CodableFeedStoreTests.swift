@@ -16,7 +16,7 @@ class CodableFeedStore {
 
 class CodableFeedStoreTests: XCTestCase {
     
-    func test_retrieve_DeliversEmptyOnEmptyCache() {
+    func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = CodableFeedStore()
         let exp = expectation(description: "Wait for cache retrieval")
         
