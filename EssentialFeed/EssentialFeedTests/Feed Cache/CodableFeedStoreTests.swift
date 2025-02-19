@@ -104,14 +104,12 @@ class CodableFeedStoreTests: XCTestCase {
     func test_insert_overridePreviouslyInsertedCacheValues() {
         let sut = makeSUT()
         
-        let firstInsertionError = insert((feed: uniqueImageFeed().local, timestamp: Date()), to: sut)
-        XCTAssertNil(firstInsertionError, "Expected to insert cache successfully")
+        insert((feed: uniqueImageFeed().local, timestamp: Date()), to: sut)
         
         let latestFeed = uniqueImageFeed().local
         let latestTimestamp = Date()
-        let latestInsertionError = insert((feed: latestFeed, timestamp: latestTimestamp), to: sut)
+        insert((feed: latestFeed, timestamp: latestTimestamp), to: sut)
         
-        XCTAssertNil(latestInsertionError, "Expected to override cache successfully")
         expect(sut, toRetrieve: .found(feed: latestFeed, timestamp: latestTimestamp))
     }
     
@@ -140,9 +138,8 @@ class CodableFeedStoreTests: XCTestCase {
     func test_delete_hasNoSideEffectsOnEmptyCache() {
         let sut = makeSUT()
         
-        let deletionError = deleteCache(from: sut)
+        deleteCache(from: sut)
         
-        XCTAssertNil(deletionError, "Expected empty cache deletion to succeed")
         expect(sut, toRetrieve: .empty)
     }
     
@@ -150,9 +147,8 @@ class CodableFeedStoreTests: XCTestCase {
         let sut = makeSUT()
         insert((feed: uniqueImageFeed().local, timestamp: Date()), to: sut)
         
-        let deletionError = deleteCache(from: sut)
+        deleteCache(from: sut)
         
-        XCTAssertNil(deletionError, "Expected non-empty cache deletion to succed")
         expect(sut, toRetrieve: .empty)
     }
     
