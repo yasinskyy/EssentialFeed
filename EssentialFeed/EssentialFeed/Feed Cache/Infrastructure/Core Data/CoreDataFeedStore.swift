@@ -12,15 +12,13 @@ public final class CoreDataFeedStore: FeedStore {
     private let context: NSManagedObjectContext
     
     public init(storeURL: URL, bundle: Bundle = .main) throws {
-        container = try NSPersistentContainer.load(modelName: "FeedStore", url: storeURL, in: bundle)
-        context = container.newBackgroundContext()
+        self.container = try NSPersistentContainer.load(modelName: "FeedStore", url: storeURL, in: bundle)
+        self.context = container.newBackgroundContext()
     }
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
         perform { context in
             do {
-                let request = NSFetchRequest<ManagedCache>(entityName: ManagedCache.entity().name!)
-                request.returnsObjectsAsFaults = false
                 if let cache = try ManagedCache.find(in: context) {
                     completion(.found(feed: cache.localFeed, timestamp: cache.timestamp))
                 } else {
@@ -38,6 +36,7 @@ public final class CoreDataFeedStore: FeedStore {
                 let managedCache = try ManagedCache.newUniqueInstance(in: context)
                 managedCache.timestamp = timestamp
                 managedCache.feed = ManagedFeedImage.images(from: feed, in: context)
+                
                 try context.save()
                 completion(nil)
             } catch {
