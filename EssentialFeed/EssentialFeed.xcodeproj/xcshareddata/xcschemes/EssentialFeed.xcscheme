@@ -49,11 +49,11 @@
       </CodeCoverageTargets>
       <TestPlans>
          <TestPlanReference
-            reference = "container:EssentialFeed/EssentialFeedTestPlan.xctestplan">
+            reference = "container:EssentialFeed/EssentialFeedTestPlan.xctestplan"
+            default = "YES">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:EssentialFeed/CITestPlan.xctestplan"
-            default = "YES">
+            reference = "container:EssentialFeed/CITestPlan.xctestplan">
          </TestPlanReference>
          <TestPlanReference
             reference = "container:EssentialFeed/FeedCacheIntegrationTestsTestPlan.xctestplan">
