@@ -55,6 +55,9 @@
          <TestPlanReference
             reference = "container:EssentialFeed/CITestPlan.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:EssentialFeed/FeedCacheIntegrationTestsTestPlan.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
