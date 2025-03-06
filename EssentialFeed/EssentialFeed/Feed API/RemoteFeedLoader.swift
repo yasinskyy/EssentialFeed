@@ -8,7 +8,7 @@
 import Foundation
 
 public final class RemoteFeedLoader: FeedLoader {
-    public typealias Result = LoadFeedResult
+    public typealias Result = FeedLoader.Result
     
     public enum Error: Swift.Error {
         case connectivity
