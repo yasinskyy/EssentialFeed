@@ -50,7 +50,7 @@ public final class CodableFeedStore: FeedStore {
                 completion(.success(.none))
                 return
             }
-
+            
             completion(Result(catching: {
                 let decoder = JSONDecoder()
                 let cache = try decoder.decode(Cache.self, from: data)
