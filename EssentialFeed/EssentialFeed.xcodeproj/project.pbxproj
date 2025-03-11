@@ -125,6 +125,7 @@
 		96DB8E282D805C2D00BDE19E /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB8E3F2D805D2C00BDE19E /* EssentialFeediOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOSTestPlan.xctestplan; sourceTree = "<group>"; };
 		96DB8E402D80601200BDE19E /* EssentialFeediOSCITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOSCITestPlan.xctestplan; sourceTree = "<group>"; };
+		96DB8E432D8098C700BDE19E /* CI-iOS.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "CI-iOS.yml"; sourceTree = "<group>"; };
 		96DFFA532D6C497B00A066F9 /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFFA5D2D6C498D00A066F9 /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		96DFFA602D6C49FE00A066F9 /* EssentialFeedFeedCacheIntegrationTestsTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedFeedCacheIntegrationTestsTestPlan.xctestplan; sourceTree = "<group>"; };
@@ -132,7 +133,7 @@
 		96E053DA2D5492470023C763 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		96E053DC2D54C2EA0023C763 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		96E053DE2D54C3170023C763 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
-		96EA0E5C2D42AE500001499E /* CI.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = CI.yml; sourceTree = "<group>"; };
+		96EA0E5C2D42AE500001499E /* CI-macOS.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "CI-macOS.yml"; sourceTree = "<group>"; };
 		96EA86422D4372780065FDBF /* EssentialFeedCITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedCITestPlan.xctestplan; path = "EssentialFeed/Test Plans/EssentialFeedCITestPlan.xctestplan"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -404,7 +405,8 @@
 		96EA0E5D2D42AE500001499E /* workflows */ = {
 			isa = PBXGroup;
 			children = (
-				96EA0E5C2D42AE500001499E /* CI.yml */,
+				96EA0E5C2D42AE500001499E /* CI-macOS.yml */,
+				96DB8E432D8098C700BDE19E /* CI-iOS.yml */,
 			);
 			path = workflows;
 			sourceTree = "<group>";

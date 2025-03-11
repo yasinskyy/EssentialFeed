@@ -30,6 +30,3 @@ jobs:
     
     - name: Build and Test macOS
       run: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodeproj -scheme "EssentialFeed" -testPlan "EssentialFeedCITestPlan" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" ONLY_ACTIVE_ARCH=YES
-      
-    - name: Build and Test iOS
-      run: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodeproj -scheme "EssentialFeediOS" -testPlan "EssentialFeediOSCITestPlan" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=18.0,name=iPhone 16" ONLY_ACTIVE_ARCH=YES
