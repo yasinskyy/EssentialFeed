@@ -16,7 +16,13 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading requests before view is loaded")
         
         sut.loadViewIfNeeded()
-        XCTAssertEqual(loader.loadCallCount, 1, "Expected a loading request once view is loaded")
+        XCTAssertEqual(loader.loadCallCount, 0, "Expected no loading request once view is loaded")
+        
+        let window = UIWindow()
+        window.rootViewController = sut
+        window.makeKeyAndVisible()
+        window.layoutIfNeeded()
+        XCTAssertEqual(loader.loadCallCount, 1, "Expected loading request once view is appearing")
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertEqual(loader.loadCallCount, 2, "Expected another loading request once user initiates a load")
@@ -29,7 +35,13 @@ final class FeedViewControllerTests: XCTestCase {
         let (sut, loader) = makeSUT()
         
         sut.loadViewIfNeeded()
-        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is loaded")
+        XCTAssertFalse(sut.isShowingLoadingIndicator, "Loading indicator is not refreshing once view is loaded")
+        
+        let window = UIWindow()
+        window.rootViewController = sut
+        window.makeKeyAndVisible()
+        window.layoutIfNeeded()
+        XCTAssertTrue(sut.isShowingLoadingIndicator, "Expected loading indicator once view is appearing")
         
         loader.completeFeedLoading(at: 0)
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once loading is completed")

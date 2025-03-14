@@ -15,10 +15,21 @@ struct FeedImageViewModel {
 final class FeedViewController: UITableViewController {
     private var feed = [FeedImageViewModel]()
     
+    private var onViewIsAppearing: ((FeedViewController) -> Void)?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        onViewIsAppearing = { vc in
+            vc.refresh()
+            vc.onViewIsAppearing = nil
+        }
+    }
+    
     override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         
-        refresh()
+        onViewIsAppearing?(self)
     }
     
     @IBAction func refresh() {
