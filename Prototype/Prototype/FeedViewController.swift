@@ -14,7 +14,6 @@ struct FeedImageViewModel {
 
 final class FeedViewController: UITableViewController {
     private var feed = [FeedImageViewModel]()
-    
     private var onViewIsAppearing: ((FeedViewController) -> Void)?
     
     override func viewDidLoad() {
@@ -34,12 +33,16 @@ final class FeedViewController: UITableViewController {
     
     @IBAction func refresh() {
         refreshControl?.beginRefreshing()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            if self.feed.isEmpty {
-                self.feed = FeedImageViewModel.prototypeFeed
-                self.tableView.reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            guard let self else { return }
+            
+            if feed.isEmpty {
+                feed = FeedImageViewModel.prototypeFeed
+                tableView.reloadData()
             }
-            self.refreshControl?.endRefreshing()
+            
+            refreshControl?.endRefreshing()
         }
     }
     
@@ -51,7 +54,9 @@ final class FeedViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedImageCell") as! FeedImageCell
         let model = feed[indexPath.row]
+        
         cell.configure(with: model)
+        
         return cell
     }
 }
