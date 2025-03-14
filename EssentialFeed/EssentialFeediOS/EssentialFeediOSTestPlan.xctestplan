@@ -1,8 +1,8 @@
 {
   "configurations" : [
     {
-      "id" : "5298F4EB-4D3C-41F8-83FE-47EC1AD71D6A",
-      "name" : "Test Scheme Action",
+      "id" : "044848C5-17BD-4C4A-8BA0-7EACFBCB71A6",
+      "name" : "Configuration 1",
       "options" : {
 
       }
@@ -18,7 +18,8 @@
         }
       ]
     },
-    "testExecutionOrdering" : "random"
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
