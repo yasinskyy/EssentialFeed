@@ -87,7 +87,7 @@ final class FeedViewControllerTests: XCTestCase {
         loader.completeFeedLoadingWithError(at: 1)
         assertThat(sut, isRendering: [image0])
     }
-
+    
     func test_feedImageView_loadsImageURLWhenVisible() {
         let image0 = makeImage(url: URL(string: "https://url-0.com")!)
         let image1 = makeImage(url: URL(string: "https://url-1.com")!)
@@ -128,7 +128,7 @@ final class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.simulateAppearance()
         loader.completeFeedLoading(with: [makeImage(), makeImage()])
-
+        
         let view0 = sut.simulateFeedImageViewVisible(at: 0)
         let view1 = sut.simulateFeedImageViewVisible(at: 1)
         XCTAssertEqual(view0?.isShowingImageLoadingIndicator, true, "Expected loading indicator for first image view while loading first image")
@@ -154,7 +154,7 @@ final class FeedViewControllerTests: XCTestCase {
         let view1 = sut.simulateFeedImageViewVisible(at: 1)
         XCTAssertEqual(view0?.renderedImage, .none, "Expected no image for first image view while loading first image")
         XCTAssertEqual(view1?.renderedImage, .none, "Expected no image for second image view while loading second image")
-    
+        
         let imageData0 = UIImage.make(withColor: .red).pngData()!
         loader.completeImageLoading(with: imageData0, at: 0)
         XCTAssertEqual(view0?.renderedImage, imageData0, "Expected image for first image view once first image loading completes successfully")
@@ -164,6 +164,28 @@ final class FeedViewControllerTests: XCTestCase {
         loader.completeImageLoading(with: imageData1, at: 1)
         XCTAssertEqual(view0?.renderedImage, imageData0, "Expected no image state change for first image view once second image loading completes successfully")
         XCTAssertEqual(view1?.renderedImage, imageData1, "Expected image for second image view once second image loading completes successfully")
+    }
+    
+    func test_feedImageViewRetryButton_isVisibleOnImageURLLoadError() {
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        sut.simulateAppearance()
+        loader.completeFeedLoading(with: [makeImage(), makeImage()])
+        
+        let view0 = sut.simulateFeedImageViewVisible(at: 0)
+        let view1 = sut.simulateFeedImageViewVisible(at: 1)
+        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action for first image view while loading first image")
+        XCTAssertEqual(view1?.isShowingRetryAction, false, "Expected no retry action for second image view while loading second image")
+    
+        let imageData = UIImage.make(withColor: .red).pngData()!
+        loader.completeImageLoading (with: imageData, at: 0)
+        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action for first image view once first image loading completes successfully")
+        XCTAssertEqual(view1?.isShowingRetryAction, false, "Expected no retry action state change for second image view once first image loading completes successfully")
+        
+        loader.completeImageLoadingWithError(at: 1)
+        XCTAssertEqual(view0?.isShowingRetryAction, false, "Expected no retry action state change for first image view once second image loading completes with error")
+        XCTAssertEqual(view1?.isShowingRetryAction, true, "Expected retry action for second image view once second image loading completes with error")
     }
     
     // MARK: - Helpers
@@ -324,10 +346,12 @@ private extension FeedViewController {
 
 private extension FeedImageCell {
     var isShowingLocation: Bool { return !locationContainer.isHidden }
+    var isShowingImageLoadingIndicator: Bool { return feedImageContainer.isShimmering }
+    var isShowingRetryAction: Bool { return !feedImageRetryButton.isHidden }
     var locationText: String? { return locationLabel.text }
     var descriptionText: String? { return descriptionLabel.text }
-    var isShowingImageLoadingIndicator: Bool { return feedImageContainer.isShimmering }
-    var renderedImage: Data? { feedImageView.image?.pngData() }
+    var renderedImage: Data? { return feedImageView.image?.pngData() }
+    
 }
 
 private extension UIRefreshControl {
