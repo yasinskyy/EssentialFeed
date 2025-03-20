@@ -103,8 +103,6 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.simulateFeedImageViewVisible(at: 1)
         XCTAssertEqual(loader.loadedImageURLs, [image0.url, image1.url], "Expected second image URL request once second image view also becomes visible")
-        
-        
     }
     
     func test_feedImageView_cancelImageLoadingWhenNotVisibleAnymore() {
@@ -122,8 +120,6 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.simulateFeedImageViewNotVisible(at: 1)
         XCTAssertEqual(loader.cancelledImageURLs, [image0.url, image1.url], "Expected two cancelled image URL requests once second image view is also not visible anymore")
-        
-        
     }
     
     func test_feedImageViewLoadingIndicator_isVisibleWhileLoadingImage() {
