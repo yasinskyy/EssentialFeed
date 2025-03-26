@@ -21,11 +21,11 @@ extension UIView {
          }
     }
     
-    public func startShimmering() {
+    private func startShimmering() {
         layer.mask = ShimmeringLayer(size: bounds.size)
     }
     
-    public func stopShimmering() {
+    private func stopShimmering() {
         layer.mask = nil
     }
     
