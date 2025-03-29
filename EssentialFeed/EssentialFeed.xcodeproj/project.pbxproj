@@ -65,6 +65,7 @@
 		96E053DB2D5492470023C763 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DA2D5492470023C763 /* FeedStore.swift */; };
 		96E053DD2D54C2EA0023C763 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DC2D54C2EA0023C763 /* RemoteFeedItem.swift */; };
 		96E053DF2D54C3170023C763 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E053DE2D54C3170023C763 /* LocalFeedImage.swift */; };
+		96EE7A1C2D983FC100F91D27 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE7A1B2D983FC100F91D27 /* FeedPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 		96E053DE2D54C3170023C763 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
 		96EA0E5C2D42AE500001499E /* CI-macOS.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "CI-macOS.yml"; sourceTree = "<group>"; };
 		96EA86422D4372780065FDBF /* EssentialFeedCITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedCITestPlan.xctestplan; path = EssentialFeed/EssentialFeedCITestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
+		96EE7A1B2D983FC100F91D27 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +536,7 @@
 		96EE7A1A2D983F3800F91D27 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96EE7A1B2D983FC100F91D27 /* FeedPresenter.swift */,
 				9693E5E22D940DDF00CF27C3 /* FeedViewModel.swift */,
 				9693E5E42D941C2600CF27C3 /* FeedImageViewModel.swift */,
 			);
@@ -844,6 +847,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EE7A1C2D983FC100F91D27 /* FeedPresenter.swift in Sources */,
 				96560A912D91692E0001796D /* FeedImageDataLoader.swift in Sources */,
 				96560A992D917BC50001796D /* FeedRefreshViewController.swift in Sources */,
 				96560A632D8C45A90001796D /* UIViewShimmering.swift in Sources */,
