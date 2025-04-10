@@ -71,6 +71,7 @@
 		96EE7D6C2DA5728900F91D27 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96EE7D6B2DA5728900F91D27 /* Feed.xcassets */; };
 		96EE7D6E2DA5868800F91D27 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE7D6D2DA5868800F91D27 /* UITableViewExtensions.swift */; };
 		96EE7D702DA587D700F91D27 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EE7D6F2DA587D700F91D27 /* UIImageViewExtensions.swift */; };
+		96EE7EBA2DA7CA9D00F91D27 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96EE7EB82DA7CA9D00F91D27 /* Feed.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,7 @@
 		96EE7D6B2DA5728900F91D27 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		96EE7D6D2DA5868800F91D27 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		96EE7D6F2DA587D700F91D27 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		96EE7EB92DA7CA9D00F91D27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +556,7 @@
 				96EE7A1F2D98508800F91D27 /* FeedLoadingViewModel.swift */,
 				96EE7A212D98528D00F91D27 /* FeedImagePresenter.swift */,
 				9693E5E42D941C2600CF27C3 /* FeedImageViewModel.swift */,
+				96EE7EB82DA7CA9D00F91D27 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EE7EBA2DA7CA9D00F91D27 /* Feed.strings in Resources */,
 				96EE7D6A2DA5720400F91D27 /* Feed.storyboard in Resources */,
 				969CF5E32D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan in Resources */,
 				96EE7D6C2DA5728900F91D27 /* Feed.xcassets in Resources */,
@@ -929,6 +933,17 @@
 			targetProxy = 96DFFA582D6C497B00A066F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96EE7EB82DA7CA9D00F91D27 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96EE7EB92DA7CA9D00F91D27 /* en */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		080EDF0321B6DA7E00813479 /* Debug */ = {
