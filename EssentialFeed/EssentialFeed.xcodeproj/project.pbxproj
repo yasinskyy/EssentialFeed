@@ -35,7 +35,7 @@
 		96560A9B2D9182C50001796D /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96560A9A2D9182C50001796D /* FeedImageCellController.swift */; };
 		96560A9E2D9189600001796D /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96560A9D2D9189600001796D /* FeedUIComposer.swift */; };
 		9693E5E52D941C2600CF27C3 /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9693E5E42D941C2600CF27C3 /* FeedImageViewModel.swift */; };
-		969CF5DB2D841FF200ECF410 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CF5DA2D841FF200ECF410 /* FeedViewControllerTests.swift */; };
+		969CF5DB2D841FF200ECF410 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CF5DA2D841FF200ECF410 /* FeedUIIntegrationTests.swift */; };
 		969CF5E32D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 969CF5E22D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan */; };
 		969CF5E52D84255300ECF410 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; };
 		969CF5E62D84255300ECF410 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -154,7 +154,7 @@
 		96560A9A2D9182C50001796D /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		96560A9D2D9189600001796D /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		9693E5E42D941C2600CF27C3 /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
-		969CF5DA2D841FF200ECF410 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
+		969CF5DA2D841FF200ECF410 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		969CF5E22D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOSTestPlan.xctestplan; sourceTree = "<group>"; };
 		969CF5EB2D843D2E00ECF410 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		969E9E842D37ACDF00EED9D0 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
@@ -428,25 +428,9 @@
 		96560A952D9169C00001796D /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				96560A962D9169CB0001796D /* Controllers */,
-				969CF5DA2D841FF200ECF410 /* FeedViewControllerTests.swift */,
+				969CF5DA2D841FF200ECF410 /* FeedUIIntegrationTests.swift */,
 			);
 			path = "Feed UI";
-			sourceTree = "<group>";
-		};
-		96560A962D9169CB0001796D /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				96560A972D9169D10001796D /* Helpers */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		96560A972D9169D10001796D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		96560A9C2D91894C0001796D /* Composers */ = {
@@ -888,7 +872,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969CF5DB2D841FF200ECF410 /* FeedViewControllerTests.swift in Sources */,
+				969CF5DB2D841FF200ECF410 /* FeedUIIntegrationTests.swift in Sources */,
 				969CF5EA2D84267E00ECF410 /* XCTestCaseMemoryLeakTrackingHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
