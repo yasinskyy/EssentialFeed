@@ -16,12 +16,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         
-        let bundle = Bundle(for: FeedViewController.self)
-        let localizedKey = "feed_title"
-        let localizedTitle = bundle.localizedString(forKey: localizedKey, value: nil, table: "Feed")
-        
-        XCTAssertNotEqual(localizedKey, localizedTitle, "Missing localized string for key: \(localizedKey)")
-        XCTAssertEqual(sut.title, localizedTitle)
+        XCTAssertEqual(sut.title, localized("feed_title"))
     }
     
     func test_loadFeedActions_requestFeedFromLoader() {
@@ -201,7 +196,7 @@ final class FeedViewControllerTests: XCTestCase {
     
     func test_feedImageViewRetryButton_isVisibleOnInvalidImageData () {
         let (sut, loader) = makeSUT()
-    
+        
         sut.loadViewIfNeeded()
         sut.simulateAppearance()
         
@@ -289,13 +284,13 @@ final class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.simulateAppearance()
         loader.completeFeedLoading(with: [makeImage(), makeImage()])
-
+        
         let view0 = try XCTUnwrap(sut.simulateFeedImageViewVisible(at: 0))
         view0.prepareForReuse()
-
+        
         let imageData0 = UIImage.make(withColor: .red).pngData()!
         loader.completeImageLoading(with: imageData0, at: 0)
-
+        
         XCTAssertEqual(view0.renderedImage, .none, "Expected no image state change for reused view once image loading completes successfully")
     }
     
@@ -304,18 +299,28 @@ final class FeedViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         sut.simulateAppearance()
         loader.completeFeedLoading(with: [makeImage(), makeImage()])
-             
+        
         let previousView = try XCTUnwrap(sut.simulateFeedImageViewNotVisible(at: 0))
         let newView = try XCTUnwrap(sut.simulateFeedImageViewVisible(at: 0))
         previousView.prepareForReuse()
-             
+        
         let imageData = UIImage.make(withColor: .red).pngData()!
         loader.completeImageLoading(with: imageData, at: 1)
-             
+        
         XCTAssertEqual(newView.renderedImage, imageData, "Expected previous cell prepareForReuse to not affect new cell")
-     }
+    }
     
     // MARK: - Helpers
+    
+    func localized(_ key: String, file: StaticString = #filePath, line: UInt = #line) -> String {
+        let table = "Feed"
+        let bundle = Bundle(for: FeedViewController.self)
+        let value = bundle.localizedString(forKey: key, value: nil, table: table)
+        if value == key {
+            XCTFail("Missing localized string for key: \(key) in table: \(table)", file: file, line: line)
+        }
+        return value
+    }
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
         let loader = LoaderSpy()
