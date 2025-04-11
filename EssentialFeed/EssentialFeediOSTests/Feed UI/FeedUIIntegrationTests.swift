@@ -310,6 +310,19 @@ final class FeedUIIntegrationTests: XCTestCase {
         XCTAssertEqual(newView.renderedImage, imageData, "Expected previous cell prepareForReuse to not affect new cell")
     }
     
+    func test_loadFeedCompletion_dispatchesFromBackgroundToMainThread() {
+        let (sut, loader) = makeSUT()
+        sut.loadViewIfNeeded()
+        sut.simulateAppearance()
+        
+        let exp = expectation(description: "Wait for background queue")
+        DispatchQueue.global().async {
+            loader.completeFeedLoading(at: 0)
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1.0)
+    }
+    
     // MARK: - Helpers
     
     func localized(_ key: String, file: StaticString = #filePath, line: UInt = #line) -> String {
