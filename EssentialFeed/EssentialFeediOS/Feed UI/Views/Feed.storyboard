@@ -19,27 +19,28 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NtB-L2-b2e">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diG-Ze-U8o">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                                    <gestureRecognizers/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
+                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                                    <state key="normal" title="Error label">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <connections>
-                                        <outletCollection property="gestureRecognizers" destination="v3c-dA-8Ij" appends="YES" id="bTf-Os-rMl"/>
+                                        <action selector="hideMessage" destination="SL1-m8-JAW" eventType="touchUpInside" id="g57-38-Pfk"/>
                                     </connections>
-                                </label>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="NtB-L2-b2e" secondAttribute="bottom" id="EtI-dk-hdG"/>
-                                <constraint firstItem="NtB-L2-b2e" firstAttribute="leading" secondItem="SL1-m8-JAW" secondAttribute="leading" id="WMj-fA-uzo"/>
-                                <constraint firstItem="NtB-L2-b2e" firstAttribute="top" secondItem="SL1-m8-JAW" secondAttribute="top" id="lNg-12-z8P"/>
-                                <constraint firstAttribute="trailing" secondItem="NtB-L2-b2e" secondAttribute="trailing" id="lTh-af-P1w"/>
+                                <constraint firstItem="diG-Ze-U8o" firstAttribute="leading" secondItem="SL1-m8-JAW" secondAttribute="leading" id="DWx-mg-2tl"/>
+                                <constraint firstAttribute="bottom" secondItem="diG-Ze-U8o" secondAttribute="bottom" id="S7Z-cU-khH"/>
+                                <constraint firstAttribute="trailing" secondItem="diG-Ze-U8o" secondAttribute="trailing" id="eC6-aE-3hW"/>
+                                <constraint firstItem="diG-Ze-U8o" firstAttribute="top" secondItem="SL1-m8-JAW" secondAttribute="top" id="iXe-Og-sb5"/>
                             </constraints>
                             <connections>
-                                <outlet property="label" destination="NtB-L2-b2e" id="8Us-iJ-p27"/>
+                                <outlet property="button" destination="diG-Ze-U8o" id="6wb-O1-Rax"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="ybk-rC-Ss3">
@@ -174,11 +175,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaR-13-6NH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="v3c-dA-8Ij">
-                    <connections>
-                        <action selector="hideMessageAnimated" destination="SL1-m8-JAW" id="OL4-oQ-mLs"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="632.82442748091603" y="26.760563380281692"/>
         </scene>
