@@ -49,6 +49,8 @@
 		964881A72DBBC6A3007E2D46 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964881A62DBBC6A3007E2D46 /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		964881A92DBBC92C007E2D46 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964881A82DBBC92C007E2D46 /* FeedImageDataStore.swift */; };
 		964881AB2DBBC942007E2D46 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964881AA2DBBC942007E2D46 /* LocalFeedImageDataLoader.swift */; };
+		964881AD2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964881AC2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift */; };
+		964881AE2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964881AC2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift */; };
 		9648EFD12D7580920081B72C /* CoreDataFeedStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648EFD02D7580920081B72C /* CoreDataFeedStoreTests.swift */; };
 		9648EFD32D7581260081B72C /* CoreDataFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648EFD22D7581260081B72C /* CoreDataFeedStore.swift */; };
 		9648EFD62D7583860081B72C /* FeedStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9648EFD42D7583860081B72C /* FeedStore.xcdatamodeld */; };
@@ -189,6 +191,7 @@
 		964881A62DBBC6A3007E2D46 /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		964881A82DBBC92C007E2D46 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		964881AA2DBBC942007E2D46 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
+		964881AC2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStoreSpy.swift; sourceTree = "<group>"; };
 		9648EFD02D7580920081B72C /* CoreDataFeedStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStoreTests.swift; sourceTree = "<group>"; };
 		9648EFD22D7581260081B72C /* CoreDataFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFeedStore.swift; sourceTree = "<group>"; };
 		9648EFD52D7583860081B72C /* FeedStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FeedStore.xcdatamodel; sourceTree = "<group>"; };
@@ -550,6 +553,7 @@
 			children = (
 				96AA18362D59D2DF00D8B09F /* FeedStoreSpy.swift */,
 				96AA18BB2D5B5EF500D8B09F /* FeedCacheTestHelpers.swift */,
+				964881AC2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -932,6 +936,7 @@
 				962A96B52D522230002FF9F3 /* CacheFeedUseCaseTests.swift in Sources */,
 				964027832D65BF8000CB873B /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
 				9640277F2D65BE6400CB873B /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
+				964881AD2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift in Sources */,
 				96AA18342D59D0AF00D8B09F /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				964881A72DBBC6A3007E2D46 /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				9640277B2D65B98300CB873B /* FeedStoreSpecs.swift in Sources */,
@@ -992,6 +997,7 @@
 				96DFFA5F2D6C498D00A066F9 /* EssentialFeedCacheIntegrationTests.swift in Sources */,
 				9648EFE12D76D61B0081B72C /* FeedCacheTestHelpers.swift in Sources */,
 				9648EFE02D76D3100081B72C /* XCTestCaseMemoryLeakTrackingHelper.swift in Sources */,
+				964881AE2DBBCC2E007E2D46 /* FeedImageDataStoreSpy.swift in Sources */,
 				964881992DBBB290007E2D46 /* HTTPClientSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
