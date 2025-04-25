@@ -18,7 +18,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_performsGETRequestWithURL() {
         let url = anyURL()
         let exp = expectation(description: "Wait for request")
-
+        
         URLProtocolStub.observeRequests { request in
             XCTAssertEqual(request.url, url)
             XCTAssertEqual(request.httpMethod, "GET")
@@ -32,15 +32,18 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
     
     func test_cancelGetFromURLTask_cancelsURLRequest() {
-        let receivedError = resultErrorFor(taskHandler: { $0.cancel() }) as NSError?
-
+        var task: HTTPClientTask?
+        URLProtocolStub.onStartLoading { task?.cancel() }
+        
+        let receivedError = resultErrorFor(taskHandler: { task = $0 }) as NSError?
+        
         XCTAssertEqual(receivedError?.code, URLError.cancelled.rawValue)
     }
     
     func test_getFromURL_failsOnRequestError() {
         let requestError = anyNSError()
         let receivedError = resultErrorFor((data: nil, response: nil, error: requestError))
-
+        
         XCTAssertEqual((receivedError as? NSError)!.domain, requestError.domain)
         XCTAssertEqual((receivedError as? NSError)!.code, requestError.code)
     }
@@ -92,7 +95,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     private func resultValuesFor(_ values: (data: Data?, response: URLResponse?, error: Error?), file: StaticString = #file, line: UInt = #line) -> (data: Data, response: HTTPURLResponse)? {
         let result = resultFor(values, file: file, line: line)
-                
+        
         switch result {
         case let .success((data, response)):
             return (data, response)
