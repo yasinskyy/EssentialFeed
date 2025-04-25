@@ -1627,8 +1627,8 @@
 		9648EFD42D7583860081B72C /* FeedStore.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9648EFD52D7583860081B72C /* FeedStore.xcdatamodel */,
 				964881B32DBBD092007E2D46 /* FeedStore2.xcdatamodel */,
+				9648EFD52D7583860081B72C /* FeedStore.xcdatamodel */,
 			);
 			currentVersion = 964881B32DBBD092007E2D46 /* FeedStore2.xcdatamodel */;
 			path = FeedStore.xcdatamodeld;
