@@ -2,6 +2,23 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../README.md">
+   </FileRef>
+   <Group
+      location = "container:../.github"
+      name = ".github">
+      <Group
+         location = "group:workflows"
+         name = "workflows">
+         <FileRef
+            location = "group:CI-macOS.yml">
+         </FileRef>
+         <FileRef
+            location = "group:CI-iOS.yml">
+         </FileRef>
+      </Group>
+   </Group>
+   <FileRef
       location = "container:../EssentialFeed/EssentialFeed.xcodeproj">
    </FileRef>
    <FileRef

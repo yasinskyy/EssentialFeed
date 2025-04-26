@@ -229,11 +229,9 @@
 		96D921C02D3F7A750022735C /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D921CA2D3F7A920022735C /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		96D921D52D3F96EE0022735C /* EssentialFeedTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedTestPlan.xctestplan; path = EssentialFeed/EssentialFeedTestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
-		96D921D62D3FA43B0022735C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		96DB8E1F2D805C2D00BDE19E /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB8E282D805C2D00BDE19E /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DB8E402D80601200BDE19E /* EssentialFeediOSCITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOSCITestPlan.xctestplan; sourceTree = "<group>"; };
-		96DB8E432D8098C700BDE19E /* CI-iOS.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "CI-iOS.yml"; sourceTree = "<group>"; };
 		96DFFA532D6C497B00A066F9 /* EssentialFeedCacheIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedCacheIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DFFA5D2D6C498D00A066F9 /* EssentialFeedCacheIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedCacheIntegrationTests.swift; sourceTree = "<group>"; };
 		96DFFA602D6C49FE00A066F9 /* EssentialFeedFeedCacheIntegrationTestsTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeedFeedCacheIntegrationTestsTestPlan.xctestplan; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		96E053DA2D5492470023C763 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		96E053DC2D54C2EA0023C763 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		96E053DE2D54C3170023C763 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
-		96EA0E5C2D42AE500001499E /* CI-macOS.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "CI-macOS.yml"; sourceTree = "<group>"; };
 		96EA86422D4372780065FDBF /* EssentialFeedCITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = EssentialFeedCITestPlan.xctestplan; path = EssentialFeed/EssentialFeedCITestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
 		96EE7D692DA5720400F91D27 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		96EE7D6B2DA5728900F91D27 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
@@ -304,8 +301,6 @@
 		080EDEE721B6DA7E00813479 = {
 			isa = PBXGroup;
 			children = (
-				96D921D62D3FA43B0022735C /* README.md */,
-				96EA0E5E2D42AE500001499E /* .github */,
 				080EDEF321B6DA7E00813479 /* EssentialFeed */,
 				080EDEFE21B6DA7E00813479 /* EssentialFeedTests */,
 				96D921CB2D3F7A920022735C /* EssentialFeedAPIEndToEndTests */,
@@ -628,24 +623,6 @@
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
-		};
-		96EA0E5D2D42AE500001499E /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				96EA0E5C2D42AE500001499E /* CI-macOS.yml */,
-				96DB8E432D8098C700BDE19E /* CI-iOS.yml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
-		96EA0E5E2D42AE500001499E /* .github */ = {
-			isa = PBXGroup;
-			children = (
-				96EA0E5D2D42AE500001499E /* workflows */,
-			);
-			name = .github;
-			path = ../.github;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
