@@ -29,6 +29,7 @@
       "name" : "EssentialFeed"
     },
     "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
     "threadSanitizerEnabled" : true
   },
   "testTargets" : [
