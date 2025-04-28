@@ -94,7 +94,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="csQ-nt-blB">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
-                                                            <accessibility key="accessibilityConfiguration">
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view">
                                                                 <bool key="isElement" value="YES"/>
                                                             </accessibility>
                                                         </imageView>
@@ -150,6 +150,9 @@
                                         <constraint firstItem="oFj-1D-95Z" firstAttribute="top" secondItem="Fot-Ve-Obp" secondAttribute="topMargin" priority="999" constant="6" id="Jr0-pE-EIR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="anu-QO-UMe" id="1Ho-P8-S2O"/>
                                     <outlet property="feedImageContainer" destination="qMF-xf-IZg" id="Aja-tu-xYC"/>
