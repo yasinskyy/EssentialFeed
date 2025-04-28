@@ -10,5 +10,5 @@ import Foundation
 public protocol FeedCache {
     typealias SaveResult = Swift.Result<Void, Error>
     
-    func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void)
+    func save(_ feed: [FeedImage], completion: @escaping (FeedCache.SaveResult) -> Void)
 }
