@@ -36,6 +36,9 @@
          <TestPlanReference
             reference = "container:EssentialApp/EssentialAppCITestPlan.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:EssentialApp/EssentialAppUIAcceptanceTestPlan.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
@@ -57,6 +60,17 @@
                BlueprintIdentifier = "964881E02DBBE1C4007E2D46"
                BuildableName = "EssentialAppUITests.xctest"
                BlueprintName = "EssentialAppUITests"
+               ReferencedContainer = "container:EssentialApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "961B3AD52DBF7E4A0052EB77"
+               BuildableName = "EssentialAppUIAcceptanceTests.xctest"
+               BlueprintName = "EssentialAppUIAcceptanceTests"
                ReferencedContainer = "container:EssentialApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
