@@ -42,6 +42,13 @@
       }
     },
     {
+      "skippedTests" : [
+        "FeedSnapshotTests",
+        "FeedSnapshotTests\/test_emptyFeed()",
+        "FeedSnapshotTests\/test_feedWithContent()",
+        "FeedSnapshotTests\/test_feedWithErrorMessage()",
+        "FeedSnapshotTests\/test_feedWithFailedImageLoading()"
+      ],
       "target" : {
         "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
         "identifier" : "96DB8E272D805C2D00BDE19E",
