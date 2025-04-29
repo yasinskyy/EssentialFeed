@@ -18,30 +18,30 @@ struct SnapshotConfiguration {
     let safeAreaInsets: UIEdgeInsets
     let layoutMargins: UIEdgeInsets
     let traitCollection: UITraitCollection
-    
-    static func iPhone16(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
+
+    static func iPhone(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
         return SnapshotConfiguration(
             size: CGSize(width: 393, height: 852),
             safeAreaInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0),
             layoutMargins: UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16),
-            traitCollection: UITraitCollection(
-                traitsFrom: [
-                    .init(forceTouchCapability: .available),
-                    .init(layoutDirection: .leftToRight),
-                    .init(preferredContentSizeCategory: .medium),
-                    .init(userInterfaceIdiom: .phone),
-                    .init(horizontalSizeClass: .compact),
-                    .init(verticalSizeClass: .regular),
-                    .init(displayScale: 3),
-                    .init(displayGamut: .P3),
-                    .init(userInterfaceStyle: style)
-                ]))
+            traitCollection: UITraitCollection(mutations: { traits in
+                traits.forceTouchCapability = .available
+                traits.layoutDirection = .leftToRight
+                traits.preferredContentSizeCategory = .medium
+                traits.userInterfaceIdiom = .phone
+                traits.horizontalSizeClass = .compact
+                traits.verticalSizeClass = .regular
+                traits.displayScale = 3
+                traits.accessibilityContrast = .normal
+                traits.displayGamut = .P3
+                traits.userInterfaceStyle = style
+            }))
     }
 }
 
 private final class SnapshotWindow: UIWindow {
-    private var configuration: SnapshotConfiguration = .iPhone16(style: .light)
-    
+    private var configuration: SnapshotConfiguration = .iPhone(style: .light)
+
     convenience init(configuration: SnapshotConfiguration, root: UIViewController) {
         self.init(frame: CGRect(origin: .zero, size: configuration.size))
         self.configuration = configuration
@@ -50,15 +50,15 @@ private final class SnapshotWindow: UIWindow {
         self.isHidden = false
         root.view.layoutMargins = configuration.layoutMargins
     }
-    
+
     override var safeAreaInsets: UIEdgeInsets {
-        return configuration.safeAreaInsets
+        configuration.safeAreaInsets
     }
-    
+
     override var traitCollection: UITraitCollection {
-        return UITraitCollection(traitsFrom: [super.traitCollection, configuration.traitCollection])
+        configuration.traitCollection
     }
-    
+
     func snapshot() -> UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds, format: .init(for: traitCollection))
         return renderer.image { action in
