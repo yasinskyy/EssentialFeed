@@ -50,6 +50,7 @@
 		9648823E2DBBE659007E2D46 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9648823B2DBBE659007E2D46 /* EssentialFeediOS.framework */; };
 		9648823F2DBBE659007E2D46 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9648823B2DBBE659007E2D46 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		964882442DBCFAE5007E2D46 /* EssentialAppTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 964882432DBCFAE5007E2D46 /* EssentialAppTestPlan.xctestplan */; };
+		964E67312DCE764500D481E4 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E67302DCE764500D481E4 /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		9648823B2DBBE659007E2D46 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		964882432DBCFAE5007E2D46 /* EssentialAppTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialAppTestPlan.xctestplan; sourceTree = "<group>"; };
 		964882452DBD00DA007E2D46 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
+		964E67302DCE764500D481E4 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				961B3AB32DBD05F10052EB77 /* SharedTestHelpers.swift */,
 				961B3AC02DBE4ECE0052EB77 /* FeedLoaderStub.swift */,
 				961B3ACA2DBE5D5B0052EB77 /* FeedImageDataLoaderSpy.swift */,
+				964E67302DCE764500D481E4 /* UIView+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				961B3ACB2DBE5D5B0052EB77 /* FeedImageDataLoaderSpy.swift in Sources */,
 				961B3AB42DBD05F10052EB77 /* SharedTestHelpers.swift in Sources */,
 				9648821E2DBBE1EF007E2D46 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				964E67312DCE764500D481E4 /* UIView+TestHelpers.swift in Sources */,
 				961B3B202DC010350052EB77 /* FeedAcceptanceTests.swift in Sources */,
 				961B3AC12DBE4ECE0052EB77 /* FeedLoaderStub.swift in Sources */,
 				961B3B1E2DC00D420052EB77 /* FeedUIIntegrationTests.swift in Sources */,
