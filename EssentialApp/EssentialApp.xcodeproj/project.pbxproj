@@ -43,7 +43,6 @@
 		964882162DBBE1EC007E2D46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964882122DBBE1EC007E2D46 /* SceneDelegate.swift */; };
 		964882182DBBE1EC007E2D46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9648820C2DBBE1EC007E2D46 /* Assets.xcassets */; };
 		9648821A2DBBE1EC007E2D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9648820F2DBBE1EC007E2D46 /* LaunchScreen.storyboard */; };
-		9648821B2DBBE1EC007E2D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964882112DBBE1EC007E2D46 /* Main.storyboard */; };
 		9648821E2DBBE1EF007E2D46 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648821C2DBBE1EF007E2D46 /* FeedLoaderWithFallbackCompositeTests.swift */; };
 		9648823C2DBBE659007E2D46 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9648823A2DBBE659007E2D46 /* EssentialFeed.framework */; };
 		9648823D2DBBE659007E2D46 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9648823A2DBBE659007E2D46 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -116,7 +115,6 @@
 		9648820C2DBBE1EC007E2D46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9648820D2DBBE1EC007E2D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9648820E2DBBE1EC007E2D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		964882102DBBE1EC007E2D46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		964882122DBBE1EC007E2D46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9648821C2DBBE1EF007E2D46 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		9648823A2DBBE659007E2D46 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +203,6 @@
 				961B3AD02DBE5FBA0052EB77 /* FeedImageDataLoaderCacheDecorator.swift */,
 				964882432DBCFAE5007E2D46 /* EssentialAppTestPlan.xctestplan */,
 				961B3ABC2DBD474A0052EB77 /* EssentialAppCITestPlan.xctestplan */,
-				964882112DBBE1EC007E2D46 /* Main.storyboard */,
 				9648820F2DBBE1EC007E2D46 /* LaunchScreen.storyboard */,
 				9648820C2DBBE1EC007E2D46 /* Assets.xcassets */,
 				9648820D2DBBE1EC007E2D46 /* Info.plist */,
@@ -326,7 +323,6 @@
 			files = (
 				964882182DBBE1EC007E2D46 /* Assets.xcassets in Resources */,
 				9648821A2DBBE1EC007E2D46 /* LaunchScreen.storyboard in Resources */,
-				9648821B2DBBE1EC007E2D46 /* Main.storyboard in Resources */,
 				964882442DBCFAE5007E2D46 /* EssentialAppTestPlan.xctestplan in Resources */,
 				961B3ABD2DBD474A0052EB77 /* EssentialAppCITestPlan.xctestplan in Resources */,
 			);
@@ -410,14 +406,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		964882112DBBE1EC007E2D46 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				964882102DBBE1EC007E2D46 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -432,7 +420,6 @@
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -463,7 +450,6 @@
 				INFOPLIST_FILE = EssentialApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
