@@ -209,6 +209,7 @@
 		9648EFDE2D75BE150081B72C /* ManagedFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFeedImage.swift; sourceTree = "<group>"; };
 		964E672C2DC1009D00D481E4 /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		964E672E2DC1015B00D481E4 /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		964E67322DD2396D00D481E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		96560A602D8C2B040001796D /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		96560A622D8C45A90001796D /* UIViewShimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShimmering.swift; sourceTree = "<group>"; };
 		96560A902D91692E0001796D /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
@@ -582,6 +583,7 @@
 		96DB8E392D805C5600BDE19E /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
+				964E67322DD2396D00D481E4 /* Info.plist */,
 				969CF5E22D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan */,
 				96DB8E402D80601200BDE19E /* EssentialFeediOSCITestPlan.xctestplan */,
 				96560A922D91693F0001796D /* Feed UI */,
@@ -1359,6 +1361,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EssentialFeediOS/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -1404,6 +1407,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EssentialFeediOS/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
