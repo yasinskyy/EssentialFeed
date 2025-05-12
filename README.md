@@ -2,7 +2,8 @@
 
 [Original Project](https://github.com/essentialdevelopercom/essential-feed-case-study)
 
-[![CI](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI.yml)
+[![CI-iOS](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI-iOS.yml/badge.svg?branch=master)](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI-iOS.yml)
+[![CI-macOS](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI-macOS.yml/badge.svg?branch=master)](https://github.com/yasinskyy/EssentialFeed/actions/workflows/CI-macOS.yml)
 
 ## Image Feed Feature Specs
 
