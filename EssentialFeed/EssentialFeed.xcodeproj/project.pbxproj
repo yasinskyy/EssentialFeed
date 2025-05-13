@@ -71,7 +71,6 @@
 		96560A9B2D9182C50001796D /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96560A9A2D9182C50001796D /* FeedImageCellController.swift */; };
 		969CF5E32D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 969CF5E22D84225900ECF410 /* EssentialFeediOSTestPlan.xctestplan */; };
 		969CF5E52D84255300ECF410 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; };
-		969CF5E62D84255300ECF410 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 080EDEF121B6DA7E00813479 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		969CF5EA2D84267E00ECF410 /* XCTestCaseMemoryLeakTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3162B2D3A78BB0022BF3E /* XCTestCaseMemoryLeakTrackingHelper.swift */; };
 		969CF5EC2D843D2E00ECF410 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CF5EB2D843D2E00ECF410 /* FeedViewController.swift */; };
 		969E9E852D37ACDF00EED9D0 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E9E842D37ACDF00EED9D0 /* URLSessionHTTPClientTests.swift */; };
@@ -139,20 +138,6 @@
 			remoteInfo = EssentialFeed;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		969CF5E92D84255300ECF410 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				969CF5E62D84255300ECF410 /* EssentialFeed.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		080EDEF121B6DA7E00813479 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -707,7 +692,6 @@
 				96DB8E1B2D805C2D00BDE19E /* Sources */,
 				96DB8E1C2D805C2D00BDE19E /* Frameworks */,
 				96DB8E1D2D805C2D00BDE19E /* Resources */,
-				969CF5E92D84255300ECF410 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
