@@ -13,10 +13,36 @@ extension FeedViewController {
     var isShowingLoadingIndicator: Bool { return refreshControl?.isRefreshing == true }
     
     func simulateAppearance() {
-        replaceRefreshControlWithFakeForiOS17Support()
+        if !isViewLoaded {
+            loadViewIfNeeded()
+            prepareForFirstAppearance()
+        }
+        
+        replaceRefreshControlWithFakeForiOS17PlusSupport()
         
         beginAppearanceTransition(true, animated: false)
         endAppearanceTransition()
+    }
+    
+    private func prepareForFirstAppearance() {
+        setSmallFrameToPreventRenderingCells()
+        replaceRefreshControlWithFakeForiOS17PlusSupport()
+    }
+    
+    private func setSmallFrameToPreventRenderingCells() {
+        tableView.frame = CGRect(x: 0, y: 0, width: 390, height: 1)
+    }
+        
+    private func replaceRefreshControlWithFakeForiOS17PlusSupport() {
+        let fake = FakeRefreshControl()
+        
+        refreshControl?.allTargets.forEach { target in
+            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
+                fake.addTarget(target, action: Selector(action), for: .valueChanged)
+            }
+        }
+        
+        refreshControl = fake
     }
     
     func simulateUserInitiatedFeedReload() {
@@ -68,18 +94,6 @@ extension FeedViewController {
         override func endRefreshing() {
             _isRefreshing = false
         }
-    }
-    
-    func replaceRefreshControlWithFakeForiOS17Support() {
-        let fake = FakeRefreshControl()
-        
-        refreshControl?.allTargets.forEach { target in
-            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
-                fake.addTarget(target, action: Selector(action), for: .valueChanged)
-            }
-        }
-        
-        refreshControl = fake
     }
     
     func numberOfRenderedFeedImageViews() -> Int {

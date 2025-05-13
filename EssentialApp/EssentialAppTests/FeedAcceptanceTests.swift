@@ -63,7 +63,6 @@ class FeedAcceptanceTests: XCTestCase {
         
         let navigationController = sut.window?.rootViewController as? UINavigationController
         let feedViewController = navigationController?.topViewController as! FeedViewController
-        feedViewController.loadViewIfNeeded()
         feedViewController.simulateAppearance()
         
         return feedViewController
